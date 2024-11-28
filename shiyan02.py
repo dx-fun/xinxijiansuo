@@ -220,8 +220,10 @@ if current_page == "首页":
             """
             <div style="background-color:#f0f0f5; padding:20px; border-radius:10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);">
                 <h5 style="text-align:center;">📖 倒排索引</h5>
+                <p style="text-align:left;">&#8226; 一种用于快速检索的索引结构。</p>
                 <p style="text-align:left;">&#8226; 提供倒排索引文档的在线浏览和下载。</p>
                 <p style="text-align:left;">&#8226; 支持在倒排索引文档中对相应词项进行检索。</p>
+                
             </div>
             """,
             unsafe_allow_html=True,
