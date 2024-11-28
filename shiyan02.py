@@ -729,4 +729,4 @@ elif current_page == "关于":
 
         """
     )
-    st.markdown("🔗 [查看源代码](https://github.com/example/repo)")
+    st.markdown("🔗 [查看源代码](https://github.com/dx-fun/xinxijiansuo.git)")
