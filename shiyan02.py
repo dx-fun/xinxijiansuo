@@ -542,8 +542,8 @@ if current_page == "首页":
 elif current_page == "解压数据集":
     st.markdown('<h3 style="text-align:center;">♏解压数据集</h3>', unsafe_allow_html=True)
     st.divider()
-    st.markdown('<h6 style="text-align:left;">✍☞上传压缩文件</h6>', unsafe_allow_html=True)
-    zip_file_path = st.file_uploader("", type=["rar", "zip", "tar","gz"])
+    st.markdown('<h6 style="text-align:left;">✍☞上传 ZIP 压缩文件</h6>', unsafe_allow_html=True)
+    zip_file_path = st.file_uploader("", type=[ "zip"])
 
     st.divider()
     st.markdown('<h6 style="text-align:left;">✍☞解压路径:</h6>', unsafe_allow_html=True)
@@ -572,9 +572,9 @@ elif current_page == "解压数据集":
             except Exception as e:
                 st.error(f"解压失败: {e}")
         else:
-            st.warning("请提供有效的压缩文件和解压路径。")
+            st.warning("请提供有效的ZIP压缩文件和解压路径。")
     else:
-        st.warning("请提供有效的压缩文件和解压路径。")
+        st.warning("请提供有效的ZIP压缩文件和解压路径。")
 
 
 # 第二步：倒排索引文档
