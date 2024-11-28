@@ -542,7 +542,7 @@ if current_page == "首页":
 elif current_page == "解压数据集":
     st.markdown('<h3 style="text-align:center;">♏解压数据集</h3>', unsafe_allow_html=True)
 
-    zip_file_path = st.text_input("✍☞ZIP 文件路径:", "")
+    zip_file_path =st.file_uploader("✍☞选择一个 ZIP 文件", type=["zip"])
     extract_to_dir = st.text_input("✍☞解压路径:", "")
 
     if st.button("解压数据集"):
