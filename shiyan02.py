@@ -208,7 +208,7 @@ if current_page == "首页":
             """
             <div style="background-color:#f0f0f5; padding:20px; border-radius:10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);">
                 <h5 style="text-align:center;">📂 数据解压</h5>
-                <p style="text-align:left;">&#8226; 根据用户在主机中的存储路径（输入时不加引号）解压文档数据集。</p>
+                <p style="text-align:left;">&#8226; 上传本地压缩文件，并输入解压路径，解压文档数据集。</p>
                 <p style="text-align:left;">&#8226; 在后续进行文档检索的过程中，务必先对数据集进行解压。</p>
             </div>
             """,
@@ -541,9 +541,13 @@ if current_page == "首页":
 # 第一步：解压数据集
 elif current_page == "解压数据集":
     st.markdown('<h3 style="text-align:center;">♏解压数据集</h3>', unsafe_allow_html=True)
+    st.divider()
+    st.markdown('<h6 style="text-align:left;">✍☞上传压缩文件</h6>', unsafe_allow_html=True)
+    zip_file_path = st.file_uploader("", type=["rar", "zip", "tar","gz"])
 
-    zip_file_path =st.file_uploader("✍☞选择一个 ZIP 文件", type=["zip"])
-    extract_to_dir = st.text_input("✍☞解压路径:", "")
+    st.divider()
+    st.markdown('<h6 style="text-align:left;">✍☞解压路径:</h6>', unsafe_allow_html=True)
+    extract_to_dir = st.text_input("", "")
 
     if st.button("解压数据集"):
         if zip_file_path and extract_to_dir:
@@ -568,9 +572,9 @@ elif current_page == "解压数据集":
             except Exception as e:
                 st.error(f"解压失败: {e}")
         else:
-            st.warning("请提供有效的 ZIP 文件路径和解压路径。")
+            st.warning("请提供有效的压缩文件和解压路径。")
     else:
-        st.warning("请提供有效的 ZIP 文件路径和解压路径。")
+        st.warning("请提供有效的压缩文件和解压路径。")
 
 
 # 第二步：倒排索引文档
