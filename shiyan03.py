@@ -5,7 +5,6 @@ from collections import defaultdict
 import numpy as np
 import streamlit as st
 import pandas as pd
-from spellchecker import SpellChecker
 
 # 停用词列表
 STOP_WORDS = set([
